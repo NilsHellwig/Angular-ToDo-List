@@ -1,0 +1,3 @@
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
+<!--Der Task wird hier tatsächlich aus dem loop entnommen-->
+<app-task-item *ngFor="let task of tasks" [task]="task" (onDeleteTask)="deleteTask(task)" (onToggleReminder)="toggleReminder(task)" ></app-task-item>
